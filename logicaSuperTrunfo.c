@@ -34,6 +34,10 @@ int main() {
     // Criação do menu do jogo
 
     int menu1;
+
+    // Variável para receber dados de operadores ternários
+
+    int cartaVencedora;
     
     printf("***Bem vindo ao jogo Super-Trunfo - Países***\n");
     printf("Entre com uma das opções:\n");
@@ -194,11 +198,33 @@ int main() {
                         printf("Pontos Turísticos Carta 1: %d\n", pontosturisticoscidade1deestado1);
                         printf("Pontos Turísticos Carta 2: %d\n", pontosturisticoscidade2deestado2);
                         printf("Carta 2 venceu!\n");
-                    }
-                    
-                    
+                    }                                        
                 break;
-            
+                case 3 :
+                    // Utilizando Operadores Ternários
+                    populacaocidade1deestado1 > poderespecialcidade2 ? (cartaVencedora = populacaocidade1deestado1) :
+                    (cartaVencedora = poderespecialcidade2);
+
+                    if (populacaocidade1deestado1 > populacaocidade2deestado2)
+                    {
+                        printf("População Carta 1: %f\n", populacaocidade1deestado1);
+                        printf("População Carta 2: %f\n", populacaocidade2deestado2);
+                        printf("Carta 1 Venceu!: %f\n", populacaocidade1deestado1);
+                    }
+                    else if (populacaocidade1deestado1 == populacaocidade2deestado2)
+                    {
+                        printf("População Carta 1: %f\n", populacaocidade1deestado1);
+                        printf("População Carta 2: %f\n", populacaocidade2deestado2);
+                        printf("Deu Empate! As duas cartas possuem mesmo população.%f%f\n", 
+                        populacaocidade1deestado1, populacaocidade1deestado1);
+                    }
+                    else
+                    {
+                        printf("População Carta 1: %f\n", populacaocidade1deestado1);
+                        printf("População Carta 2: %f\n", populacaocidade2deestado2);
+                        printf("Carta 2 Venceu! %f\n", populacaocidade2deestado2);
+                    }                    
+                break;
                 default:
                     printf("Opção Inválida.\n");
                 break;
